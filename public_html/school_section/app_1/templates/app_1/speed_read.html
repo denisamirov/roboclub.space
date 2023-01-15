@@ -1,0 +1,134 @@
+{% extends "layout/basic.html" %}
+{% load static %}
+{% block style %}
+  <link rel="stylesheet" type="text/css"
+  href="{% static 'app_1/speed_read.css'%}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="{% static 'app_1/js/speed_read.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+<nav id='menu' class="full-screen-nav">
+    <div class="backdrop"></div>
+    <ul id="list">
+        <li class="sp">
+            <p id="1_class"><i class="fas fa-home"></i> 1 класс</p>
+        </li>
+        <li class="sp">
+            <p id="2_class"><i class="fas fa-user-alt"></i> 2 класс</p>
+        </li>
+        <li class="sp">
+            <p id="3_class"><i class="fas fa-tasks"></i> 3 класс</p>
+        </li>
+        <li class="sp">
+            <p id="4_class"><i class="fas fa-comment-dots"></i> 4 класс</p>
+        </li>
+        <li class="sp">
+            <p id="adult"><i class="fas fa-at"></i> Взрослые</p>
+        </li>
+
+        <li class="sp">
+            <p id="back"><i class="fas fa-at"></i> Назад</p>
+        </li>
+
+        <li id = 'first_text'>
+            {% for sh in all %}
+            
+                {% if sh.id_group == fi.0 %}
+                <p class="lot_of_texts" data-btn={{sh.name_text}}>{{sh.name_text}}</p>
+                {% endif %}
+            </p>
+            {% endfor %}
+        </li>
+
+
+        <li id = 'second_text'>
+            {% for sh in all %}
+          
+                {% if sh.id_group == se.0 %}
+                <p class="lot_of_texts" data-btn={{sh.name_text}}>{{sh.name_text}}</p>
+                {% endif %}
+            </p>
+            {% endfor %}
+        </li>
+
+
+        <li id = 'three_text'>
+            {% for sh in all %}
+         
+                {% if sh.id_group == th.0 %}
+                <p class="lot_of_texts" data-btn={{sh.name_text}}>{{sh.name_text}}</p>
+                {% endif %}
+            </p>
+            {% endfor %}
+        </li>
+
+        <li id = 'four_text'>
+            {% for sh in all %}
+                {% if sh.id_group == fo.0 %}
+                <p class="lot_of_texts" data-btn={{sh.name_text}}>{{sh.name_text}}</p>
+                {% endif %}
+            </p>
+            {% endfor %}
+        </li>
+
+        <li id = 'adults_text'>
+            {% for sh in all %}
+                {% if sh.id_group == ad.0 %}
+                <p class="lot_of_texts" data-btn={{sh.name_text}}>{{sh.name_text}}</p>
+                {% endif %}
+            </p>
+            {% endfor %}
+        </li>
+        
+    </ul>
+</nav>
+
+        <div class="time">
+        <p class="time"><span id="seconds">00</span><bold>:</bold><span id="tens">00</span></p>
+        <button class="button-speed" id="button-start">СТАРТ</button>
+        <button class="button-speed" id="button-reset">Обновить</button>
+        <button class="button-speed trigger" id="b-text"> Текст<i class="fas fa-bars"></i></button>
+        
+        
+        <div class="panel_i">
+        <button class="button-speed" id="size_plus">Размер +<i class="fas fa-bars"></i></button>
+        <button class="button-speed" id="size_minus">Размер -<i class="fas fa-bars"></i></button>
+        <button class="button-speed" id="field_plus">Поле +<i class="fas fa-bars"></i></button>
+        <button class="button-speed" id="field_minus">Поле -<i class="fas fa-bars"></i></button>
+    </div>
+</div> 
+        <textarea id="text" readonly>Выберите текст ...</textarea>
+        
+        <div class="time">
+        <button class="button-speed" id="button-stop">СТОП</button>
+        </div>
+          
+            <table id="result">
+                <tr>
+                    <td colspan="3" style="text-align: center;">Результат</td>
+                </tr>
+                <tr>
+                    <td> Скорость чтения:  </td>
+                    <td id="speed"></td>
+                    <td> cлов в минуту </td>
+                </tr>
+                <tr id="q">
+                    <td> Количество слов:  </td>
+                    <td id="number_of_wordse"></td>
+                    <td> cлов(a) </td>
+                </tr>
+                <tr>
+                    <td> Время:  </td>
+                    <td id="timee"></td>
+                    <td> cекунд(ы) </td>
+                </tr>
+            </table>
+           
+
+
+
+           
+
+
+{% endblock %}

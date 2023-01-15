@@ -1,0 +1,18 @@
+{% load static %}
+
+{% block style %}
+  <link rel="stylesheet" type="text/css"
+  href="{% static 'app_1/er.css' %}">
+{% endblock %}
+
+
+{% block content %}
+        <div class="r">
+            <img class="ph" src="{% static 'app_1/pictures/error_1.jpg'%}">
+            <div class="d">
+            <h2>... Упс:) Эта страница, кажется, еще в разработке...</h2>
+            </div>
+        </div>
+
+        {% endblock %}
+  

@@ -1,0 +1,20 @@
+{% extends "layout/basic.html" %}
+{% load static %}
+
+{% block style %}
+  <link rel="stylesheet" type="text/css"
+  href="{% static 'app_1/login.css'%}">
+{% endblock %}
+
+
+
+
+
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    <p>{{ user_form.as_p }}<p>
+    <p>{{ profile_form.as_p }}</p>
+    <input class="blackstar" type="submit" value="СОХРАНИТЬ">
+  </form>
+{% endblock %}

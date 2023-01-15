@@ -1,0 +1,5 @@
+django==3.0.2
+mysqlclient==2.1.1
+pyTelegramBotAPI==4.7.1
+telepot==12.7
+sqlparse==0.4.2

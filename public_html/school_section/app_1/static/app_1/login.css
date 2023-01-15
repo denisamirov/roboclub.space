@@ -1,0 +1,50 @@
+h2 {
+    margin: 2%;
+    text-align: center;
+    font-size: 110%;
+    font-family: Bradley Hand, cursive;
+    color: #4e4e4e;
+    font-size: 150%;
+}
+
+p {
+    margin: 2%;
+    text-align: center;
+    font-size: 110%;
+    font-family: Bradley Hand, cursive;
+    color: #4e4e4e;
+}
+
+input {
+    margin: 1%;
+    font-size: 110%;
+    font-family: Bradley Hand, cursive;
+    margin: 0 auto;
+    display: block;
+
+}
+
+.divaf {
+    margin-top: 5%;
+    height: 470px;
+}
+
+
+.blackstar {
+    border: 0px;
+    background-color: transparent;
+    transition-duration: 2s;
+    font-family: Aria;
+    color: black;
+    text-align: center;
+  
+  }
+  
+  .blackstar:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    transition-duration: 1s;
+    cursor: pointer;
+    border-radius: 5%;
+    opacity: 0.9;
+  
+  }

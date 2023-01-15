@@ -1,0 +1,39 @@
+.table {
+    margin-top: 1%;
+    margin-right: 1%;
+    
+}
+
+.my_img {
+    margin-top: 3%;
+    height: auto;
+}
+
+
+input {
+    width: 100%;
+}
+
+p {color: rgb(109, 109, 109);
+font-size: 2vw;}
+
+
+
+H3 {
+  margin-top: 3%;
+  text-shadow:
+    1px 1px rgb(139, 139, 139),
+    2px 2px #777;
+  color: rgb(255, 255, 255);
+  transition: all 1s;
+}
+
+H3:hover {
+  text-shadow:
+    1px 1px white,
+    2px 2px rgb(168, 233, 159);
+  color: rgb(143, 220, 20);
+}
+
+
+.go {margin-right: 1%;}

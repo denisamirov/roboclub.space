@@ -1,0 +1,59 @@
+{% extends "layout/basic.html" %}
+{% load static %}
+
+{% block style %}
+  <link rel="stylesheet" type="text/css"
+  href="{% static 'app_1/TimetableRobots.css'%}">
+  <script src="{% static 'app_1/js/TimetableRobots.js' %}"></script>
+  <meta http-equiv="pragma" content="no-cache">
+{% endblock %}
+
+{% block content %}
+<div id="butt">
+ <table>
+    <tr>
+    <td><h1>Робототехника</h1></td>
+<td><ul type="none" id="buttons">
+  <li class="but" id="f"><a href="#first"><button id="first"> 1 класс</button></a></li>
+ <li class="but" id="s"><button id="second">2, 3 класс</button></li>
+ <li class="but" id="fo"><button id="four">4, 5 класс</button></li>
+  </ul></td>
+    </tr>
+    <tr>
+          <td><h1>Web-дизайн</h1></td>
+<td><ul type="none" id="buttons">
+ <li class="but" id="si"><button id="six">6 класс</button></li>
+ <li class="but" id="o"><button id="other">Остальные</button></li>
+  </ul></td>
+      <tr>
+      
+</table>
+</div>
+
+<p>
+<iframe id="first_class" src="https://calendar.google.com/calendar/embed?height=500&wkst=2&bgcolor=%23B39DDB&ctz=Europe%2FMoscow&showPrint=0&mode=MONTH&showTitle=0&showNav=1&showDate=1&showTabs=0&showCalendars=0&showTz=1&src=MzQ3OGU2NmU4MWJmYjc3YTYzNGUxNDg3YTkzZTQ5NWNlYmVlN2E0OWU3NGE2NGExNDM4N2RlOTc1MzU2ZDVlZEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23AD1457" style="border-width:0;" width="800" height="500" frameborder="0" scrolling="no"></iframe>
+</p>
+
+<p>
+<iframe id="second_class" src="https://calendar.google.com/calendar/embed?height=500&wkst=2&bgcolor=%23F6BF26&ctz=Europe%2FMoscow&showTitle=0&showPrint=0&showNav=1&showTabs=0&showCalendars=0&src=NTVkYTliMjZlYTBmYjU1NzEyOThjN2RhODczYzI2MjlkZjMyMzVmNWFjNWE3NzQyYzUyZGRmMWY1ZmRiYTYwZUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23F09300" style="border-width:0" width="800" height="500" frameborder="0" scrolling="no"></iframe>
+</p>
+
+<p>
+  <iframe id="third_class"  src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23D81B60&ctz=Europe%2FMoscow&showTitle=0&showTabs=0&showCalendars=0&showPrint=0&src=ZTZmNjgwMDgzNmY0MzUzMTc4YWE0OThhNWFhMTE2ZjMzNjQxZTYxZTQ5MGE5YmFmOTZiN2E0OWMxMTMzMDQwNUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%234285F4" style="border-width:0" width="800" height="500" frameborder="0" scrolling="no"></iframe>
+</p>
+
+<p>
+  <iframe id="six_class" src="https://calendar.google.com/calendar/embed?height=500&wkst=2&bgcolor=%230B8043&ctz=Europe%2FMoscow&showTitle=0&showPrint=0&showTabs=0&showCalendars=0&src=OTRkODNlNGQ0YzIwMjYwZGFlMTZiNzlmNjBlNTFlMTk4YjkxZmQyZGZmMzAyMDU4NzY1MGEyOTBlY2Q4M2Q3YUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23795548&color=%2333B679" style="border:solid 1px #777" width="800" height="500" frameborder="0" scrolling="no"></iframe>
+  </p>
+
+<p>
+  <iframe id="other_class" src="https://calendar.google.com/calendar/embed?height=500&wkst=2&bgcolor=%237CB342&ctz=Europe%2FMoscow&showTitle=0&showPrint=0&showTabs=0&showCalendars=0&src=ZTFhN2I3NTNhMjcwZGFiZWE1ZDY5ZDAxMTI3MDIxMTA0YjIxMGRmYzAwNjY0NTQxOGE5MTVlMDAxMDdlNzVhZkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%237CB342&color=%2333B679" style="border-width:0" width="800" height="500" frameborder="0" scrolling="no"></iframe>
+</p>
+
+<a name="first"></a>
+
+
+
+
+
+{% endblock content %}

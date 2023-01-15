@@ -1,0 +1,147 @@
+{% extends "layout/basic.html" %}
+{% load static %}
+
+{% block style %}
+  <link rel="stylesheet" type="text/css"
+  href="{% static 'app_1/shedule.css'%}">
+  <script src="{% static 'app_1/js/shedule.js' %}"></script>
+{% endblock %}
+
+
+
+
+        {% block content %}
+        <div class="container-fluid">
+          <div class="row">
+            <div class="c">
+              <ul id="slider">
+                <li>
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col">
+                        <p class="slider-text2">Заведи ONLINE</p>
+                    <p class="slider-text"> читательский дневник </p></div>
+                    <div class="col slider-photo">
+                    <img class="slider-photos" src="{% static 'app_1/pictures/11.png'%}"></div>
+                  </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col">
+                    <p class="slider-text2">Смотри ONLINE</p>
+                    <p class="slider-text">расписание занятий и домашку</p></div>
+                    <div class="col slider-photo">
+                    <img class="slider-photos" src="{% static 'app_1/pictures/22.png'%}"></div>
+                  </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col">
+                        <p class="slider-text2">Поступи ONLINE</p>
+                    <p class="slider-text">на робототехнику </p></div>
+                    <div class="col slider-photo">
+                    <img class="slider-photos" src="{% static 'app_1/pictures/33.png'%}"></div>
+                  </div>
+                  </div>
+                </li>
+              </ul>
+              </div>
+
+          </div>
+        </div>
+            
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <!-- <p id="slog">Кружок по робототехнике и программированию №1 в Пестречинском районе</p> -->
+            </div>
+
+            <div>
+                <h4 class="_2Jzp1 _2A_oF _3AZQf">Робототехника</h4>
+            </div>
+
+          <div id = 'bg'>
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+              <div class="card card text-white bg-secondary mb-3 h-100" onclick="location.href='http://127.0.0.1:8000/registration/';">
+                <img src="{% static 'app_1/pictures/1.png'%}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Запись</h5>
+                  <p class="card-text">Запишись онлайн на робототехнику и программирование!</p>
+                </div>
+                <div class="card-footer">
+
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card card text-white bg-secondary mb-3 р-50 h-100" onclick="location.href='http://127.0.0.1:8000/kind_of_studing/';">
+                <img src="{% static 'app_1/pictures/2.png'%}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Направления</h5>
+                <p class="card-text">Выберите направление подготовки</p>
+                </div>
+                <div class="card-footer">
+
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card text-white bg-secondary mb-3 h-100" onclick="location.href='http://127.0.0.1:8000/projects/';">
+                <img src="{% static 'app_1/pictures/3.png'%}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Проекты</h5>
+                  <p class="card-text">Кликни, чтобы посмотреть реализованные проекты</p>
+                </div>
+  
+            </div>
+          </div>
+
+        </div>
+        </div>
+
+        <div>
+          <h4 class="_2Jzp1 _2A_oF _3AZQf">Разработали на уроках</h4>
+      </div>
+
+        <div class="w">
+          <div class="_3uszr">
+
+
+        <a href="{% url 'diary'%}" rel="" class="_3VBwe Link_theme_default _2CQUf UsefulLink_theme_default _2TuJD" id="">
+          <img class="Image _2sN0q Image_theme_default _2P7Km" src="https://api.www.bmstu.ru/upload/quick-link/47/60ac11f102cd0.svg" alt="image" data-src="https://api.www.bmstu.ru/upload/quick-link/47/60ac11f102cd0.svg">
+          <p class="TgjEa _2sRWd oco2E" id="">Читательский дневник</p>
+        </a>
+        
+        <a href="{% url 'TimetableRobots'%}" rel="" target="_blank" class="_3VBwe Link_theme_default _2CQUf UsefulLink_theme_default _2TuJD" id="">
+          <img class="Image _2sN0q Image_theme_default _2P7Km" src="https://api.www.bmstu.ru/upload/quick-link/49/60ac121077638.svg" alt="image" data-src="https://api.www.bmstu.ru/upload/quick-link/49/60ac121077638.svg">
+          <p class="TgjEa _2sRWd oco2E" id="">Расписание</p>
+        </a>
+
+        <a href="{% url 'speed_read'%}" rel="" target="_blank" class="_3VBwe Link_theme_default _2CQUf UsefulLink_theme_default _2TuJD" id="">
+          <img class="Image _2sN0q Image_theme_default _2P7Km" src="https://api.www.bmstu.ru/upload/quick-link/45/60ac11ffc0723.svg" alt="image" data-src="https://api.www.bmstu.ru/upload/quick-link/45/60ac11ffc0723.svg">
+          <p class="TgjEa _2sRWd oco2E" id="">Проверка техники чтения</p>
+        </a>
+            
+      </div>
+    </div>
+
+    <div>
+      <h4 class="_2Jzp1 _2A_oF _3AZQf">Наши координаты</h4>
+        </div>
+
+    <div class="w">
+      <div class="_3uszr">
+
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A5ec1d0eb857910e452c968e8d0aded5c9c50543a55cb829b234cab144a081cb5&amp;source=constructor" width="400" height="400" frameborder="0"></iframe>
+            
+      </div>
+    </div>
+
+   
+
+
+          
+    {% endblock %}

@@ -1,0 +1,157 @@
+{% extends "layout/basic.html" %}
+{% load static %}
+{% block style %}
+  <link rel="stylesheet" type="text/css"
+  href="{% static 'app_1/clean.css'%}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="{% static 'app_1/js/clean.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+<!--Контейнер-->
+<div class="container-fluid">
+<!--    Начало первой строки-->
+ <div class="row">
+   
+    <div class="col">
+      <img class='my_img' src="{% static 'app_1/pictures/clean_1.jpg'%}">
+    </div>
+    <div class="go col-sm-9">
+<!--      Таблица с показателями системы очистки солнечных панелей-->
+         <h3>Таблица с характеристиками основных компонентов системы очистки</h3>
+        <table class="table table-dark table-striped">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Потребители электроэнергии</th>
+      <th scope="col">Количество, шт</th>
+      <th scope="col">Мощность, Вт/шт</th>
+      <th scope="col">Источник питания</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Электрический сервопривод</td>
+      <td id="number_of_servo">3</td>
+      <td id="servo_power">12</td>
+      <td>Li-IoN батарея 12В</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Плата управления</td>
+      <td id="number_of_logic">1</td>
+      <td id="logic_power">1</td>
+      <td>Li-IoN батарея 5В</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Система очистки оледенения</td>
+      <td id="number_of_hold">1</td>
+      <td id="hold_power">10</td>
+      <td>Li-IoN батарея 12В</td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td>Система полива</td>
+      <td id="number_of_water">1</td>
+      <td id="water_power">12</td>
+      <td>Li-IoN батарея 12В</td>
+    </tr>
+  </tbody>
+</table>
+<!--        Конец таблицы с показателями -->
+
+    </div>
+  </div>
+<!--    Конец первой строки-->
+
+<!--Начало второй строки-->
+
+ <div class="row">
+    <div class="col">
+      <img class='my_img' src="{% static 'app_1/pictures/clean_2.jpg'%}">
+    </div>
+    <div class="go col-sm-9">
+<!--Таблица с выбором данных солнечной станции-->
+    <h3>Характеристики солнечной станции</h3>
+    <div class="row">
+    <div class="col-sm-3">
+      <p><strong>Мощность одного модуля, Вт</strong></p>
+      <p><input id="power_moduls" name="power_moduls" type="number" value="50"></p>
+    </div>
+    <div class="col-sm-3">
+        <p><strong>Количество модулей, штук</strong></p>
+        <p><input id="number_moduls" name="number_moduls" type="number" placeholder="Кол-во модулей"></p>
+    </div>
+    <div class="col-sm-3">
+      <p><strong>Ширина одного модуля, мм</strong></p>
+      <p><input id="size_moduls" type="number" value="500"></p>
+    </div>
+    <div class="col-sm-3">
+      <p><strong>Кол-во модулей в ряду, шт</strong></p>
+      <p><input id="number_moduls_in_line" name="number_moduls_in_line" type="number" value="50"></p>
+    </div>
+        <a><button id="button_check" class="btn btn-dark btn-outline-light" type="button">Рассчитать эффективность системы очистки</button></a>
+        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+  <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <img src="..." class="rounded me-2" alt="...">
+      <strong class="me-auto">Clean World Bot</strong>
+      <small>Внимание!</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
+    </div>
+    <div class="toast-body">
+      Обратите внимание на то,что выработка электроэнергии солнечной станцией в год берется, как 70% от установленной мощности станции
+    </div>
+  </div>
+</div>
+    </div>
+<!--        Конец таблицы с показателями -->
+
+    </div>
+  </div>
+<!--    Конец второй строки-->
+
+<!--Начало третьей строки    -->
+ <div class="row">
+    <div class="col">
+      <img class='my_img' src="{% static 'app_1/pictures/clean_3.jpg'%}">
+    </div>
+    <div class="go col-sm-9">
+<!--Таблица с выбором данных солнечной станции-->
+    <h3>Оценка эффективности системы очистки</h3>
+    <div class="row">
+    <div class="col-sm-3">
+      <p><strong>Время работы в день, мин</strong></p>
+      <p><input id="work_in_day" name="time_work" readonly></p>
+    </div>
+    <div class="col-sm-3">
+        <p><strong>Потребление ЭЭ в день, кВт</strong></p>
+        <p><input id="consumption_in_day" name="consumption_power_day" readonly value="0"></p>
+    </div>
+    <div class="col-sm-3">
+      <p><strong>Потребление ЭЭ в год, кВт</strong></p>
+      <p><input id="consumption_in_year" name="consumption_power_year" readonly value="500"></p>
+    </div>
+    <div class="col-sm-3">
+      <p><strong>Эффективность очистки, %</strong></p>
+      <p><input name="eff" id="eff" type="number" value="50"></p>
+    </div>
+    </div>
+<!--        Конец таблицы с показателями -->
+<a href="mailto:amirowdenis@yandex.ru"><button id="button_check" class="btn btn-dark btn-outline-light" type="button">Заказать систему</button></button></a>
+    </div>
+    
+  </div>
+<!--    Конец третьей строки-->
+
+</div>
+<!--Конец контейнера-->
+
+
+
+
+
+  
+{% endblock %}

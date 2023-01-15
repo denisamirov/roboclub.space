@@ -1,0 +1,18 @@
+{% extends "layout/basic.html" %}
+{% load static %}
+{% block style %}
+  <link rel="stylesheet" type="text/css"
+  href="{% static 'app_1/login.css'%}">
+{% endblock %}
+ 
+{% block content %}
+<h2>Регистрация нового пользователя</h2>
+<form method="post">
+  {% csrf_token %}
+  <p>Имя пользователя:</p> <input type="text" name="username" required><br>
+  <p> Email:</p> <input type="email" name="email" required><br>
+  <p> Пароль:</p> <input type="password" name="password" required><br>
+  <p>Пароль еще раз:</p> <input type="password" name="password2" required><br>
+  <input class="blackstar" type="submit" value="ЗАРЕГИСТРИРОВАТЬСЯ">
+</form>
+{% endblock content %}

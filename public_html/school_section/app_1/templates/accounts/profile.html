@@ -1,0 +1,49 @@
+{% extends "layout/basic.html" %}
+{% load static %}
+{% block style %}
+  <link rel="stylesheet" type="text/css"
+  href="{% static 'app_1/intel.css'%}">
+  <script src="{% static 'app_1/js/intel.js' %}"></script>
+{% endblock %}
+
+
+
+
+        {% block content %}
+
+
+        <div id="container">
+          <div id="stroka">
+              <div class="hover-text-one" onclick="location.href='http://127.0.0.1:8000/diary';">
+                  <figure class="effect-text-two">
+                      <img class="photo-in-page" src="{% static 'app_1/pictures/intel_1.jpg'%}">
+                      <figcaption>
+                    <h3>Читательский <span>дневник</span></h3>
+                    <p>Заведи читательский дневник ONLINE. <strong>КЛИКНИ</strong></p>
+                      </figcaption>			
+                  </figure>
+                </div>
+                <div class="hover-text-one" onclick="location.href='http://127.0.0.1:8000/timerobots/';">
+                  <figure class="effect-text-two">
+                      <img class="photo-in-page" src="{% static 'app_1/pictures/intel_2.jpg'%}">
+                      <figcaption>
+                    <h3>TECHNO<span>расписание</span></h3>
+                    <p>Расписание ONLINE. <strong>КЛИКНИ</strong></p>
+                      </figcaption>			
+                  </figure>
+                </div>
+                <div class="hover-text-one" onclick="location.href='http://127.0.0.1:8000/speed_read/';">
+                  <figure class="effect-text-two">
+                      <img class="photo-in-page" src="{% static 'app_1/pictures/intel_3.jpg'%}">
+                      <figcaption>
+                    <h3>Техника <span>чтения</span></h3>
+                    <p>Проверь скорость чтения ONLINE. <strong>КЛИКНИ</strong></p>
+                      </figcaption>			
+                  </figure>
+                </div>
+          </div>
+      </div>    
+
+
+
+{% endblock %}

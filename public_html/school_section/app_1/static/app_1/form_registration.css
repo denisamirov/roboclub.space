@@ -1,0 +1,126 @@
+
+table {
+    margin-top: 2%;
+}
+
+tr {
+    color: rgb(63, 63, 63);
+    font-size: 120%;
+}
+td {
+    width: 40%;
+	font-size:2vw;
+}
+
+label {
+    margin-left: 2%;
+    width: 100%;
+}
+
+textarea {
+    margin-left: 5%;
+    width: 100%;
+}
+
+select {
+    margin-left: 5%;
+	width: 100%;
+}
+
+input {
+    margin-left: 5%;
+	width: 100%;
+}
+
+
+
+
+
+input:focus {height: 200%;}
+
+p {color: red;}
+
+
+.but {
+	font-size: 25px;
+	width: 50%;
+	height: 2em;
+	text-align: center;
+	line-height: 2em;
+	font-family: sans-serif;
+	text-transform: capitalize;
+	position: relative;
+	transition: 0.5s;
+	margin: 0% 0% 0% 5%;
+}
+
+.but::before,
+.but::after {
+	content: '';
+	position: absolute;
+	width: 0.01em;
+	height: 0.01em;
+	background-color: gainsboro;
+	border-radius: 50%;
+	transition: 0.5s cubic-bezier(0.5, -0.5, 0.25, 1.5);
+	top: calc(50% - 0.6em / 2);
+}
+
+.but::before {left: 0; z-index: -1;}
+.but::after {right: 0; z-index: -2;}
+
+.but:hover {
+	color: white;
+}
+
+.but:hover::before,
+.but:hover::after {
+	width: 100%;
+	height: 100%;
+	border-radius: 0;
+	background-color: rgba(44, 44, 44, 0.8);
+}
+
+.but:hover::before {
+	top: 0;
+}
+
+.but:hover::after {
+	right: -0.4em;
+	filter: brightness(0.8);
+}		
+
+
+#btn-export {
+	font-family: 'Berkshire Swash', cursive;
+    background-color: initial;
+    border: none;
+    font-size: inherit;
+	color:rgb(74, 171, 255);
+}
+
+#buttons {
+	padding: 0;
+	list-style-type: none;
+}
+
+.cent {
+	text-align: -webkit-center;
+}
+
+
+
+@media (max-width:785px){
+	input {
+		height: 50px;
+    	font-size: 3vw;
+    	word-wrap: normal;
+    	overflow-wrap: break-word;
+	}
+
+	td {
+		font-size: 3vw;
+	}
+  
+  }
+

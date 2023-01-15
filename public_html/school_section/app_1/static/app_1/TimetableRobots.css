@@ -1,0 +1,117 @@
+p {
+  text-align: center;
+  width: auto;
+}
+
+h1, h2 {
+  color: rgb(0 0 0 / 55%);
+  text-align: center;
+}
+
+
+@media (min-width: 500px) {
+iframe {
+	width: 500px;
+}
+}
+
+#butt {
+  text-align: -webkit-center;
+  
+}
+
+iframe {
+  display: none;
+  width: -webkit-fill-available;
+}
+
+
+
+.but {
+	font-size: 25px;
+	width: 8em;
+	height: 2em;
+	text-align: center;
+	line-height: 2em;
+	font-family: sans-serif;
+	text-transform: capitalize;
+	position: relative;
+	transition: 0.5s;
+	margin: 0.8em;
+  
+}
+
+.but::before,
+.but::after {
+	content: '';
+	position: absolute;
+	width: 0.01em;
+	height: 0.01em;
+	background-color: gainsboro;
+	border-radius: 50%;
+	transition: 0.5s cubic-bezier(0.5, -0.5, 0.25, 1.5);
+	top: calc(50% - 0.6em / 2);
+  
+}
+
+.but::before {left: 0; z-index: -1; opacity: 0.3;}
+.but::after {right: 0; z-index: -2; opacity: 0.3;}
+
+.but:hover {
+	color: white;
+  cursor: pointer;
+
+}
+
+.but:hover::before,
+.but:hover::after {
+	width: 100%;
+	height: 100%;
+	border-radius: 0;
+	background-color: rgba(44, 44, 44, 0.8);
+}
+
+.but:hover::before {
+	top: 0;
+  cursor: pointer;
+  
+}
+
+.but:hover::after {
+	right: -0.4em;
+	filter: brightness(0.8);
+}		
+
+
+
+@media (max-width:785px){
+	table {
+		font-size: 2vw;
+		margin: 5% 0% 0% 2%;
+	}
+
+	#btn-export {
+		font-size: 3vw;
+	}
+
+	.but {
+		font-size: 10px;
+	}
+  }
+
+#first, #second, #four, #six, #other {
+	font-family: 'Berkshire Swash', cursive;
+    background-color: initial;
+    border: none;
+    font-size: inherit;
+	color: rgb(0 0 0 / 55%);
+    cursor: pointer;
+}
+
+body {
+	background: linear-gradient(90deg, #49a09d, #5f2c82);
+	font-family: sans-serif;
+}
+
+
+  

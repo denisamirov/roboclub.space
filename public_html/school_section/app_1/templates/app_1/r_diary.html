@@ -1,0 +1,45 @@
+{% extends "layout/basic.html" %}
+{% load static %}
+
+{% block style %}
+  <link rel="stylesheet" type="text/css"
+  href="{% static 'app_1/r_diary.css'%}">
+  <script src="{% static 'app_1/js/r_diary.js' %}"></script>
+{% endblock %}
+
+
+{% block content %}
+      <div id="source-html">
+        <h1>Читательский дневник</h1>
+        <h2>Пользователь: {{user.first_name}} {{user.last_name}}</h2>
+        <table width="100%" border="1">
+          <tr>
+            <th>Дата</th>
+            <th>Название</th>
+            <th>Автор книги</th>
+            <th>Начальная страница</th>
+            <th>Конечная страница</th>
+          </tr>
+
+          {% for point in diary %}
+          <tr>
+            <td>{{point.date|date:'d-m-Y'}}</td>
+            <td>{{point.title}}</td>
+            <td>{{point.author}}</td>
+            <td>{{point.start_page}}</td>
+            <td>{{point.end_page}}</td>
+          <tr>  
+          {% endfor %}
+        </table>
+    </div>
+    <div class="content-footer">
+      <ul id="buttons">
+        <li class="but"><a href="{% url 'diary_rewrite' %}"><button id="btn-export" onclick>Добавить запись</button></a></li>
+        <li class="but"><button id="btn-export">Редактировать</button></li>
+        <li class="but"><button id="btn-export" onclick="exportHTML();">Скачать в Word</button></li>
+        </ul>
+    </div>
+
+
+{% endblock content %}
+  
